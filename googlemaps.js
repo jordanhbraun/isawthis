@@ -1,21 +1,17 @@
-function init_map() {
-        var var_location = new google.maps.LatLng(40,-100);
- 
-        var var_mapoptions = {
-          center: var_location,
-          zoom: 4
-        };
- 
-        var var_marker = new google.maps.Marker({
-            position: var_location,
-            map: var_map,
-            title:"USA"});
- 
-        var var_map = new google.maps.Map(document.getElementById("map-container"),
-            var_mapoptions);
- 
-        var_marker.setMap(var_map);    
- 
-      }
- 
-      google.maps.event.addDomListener(window, 'load', init_map);
+function initialize() {
+  var myLatlng = new google.maps.LatLng(49.496675,-102.65625);
+  var mapOptions = {
+    zoom: 4,
+    center: myLatlng
+  }
+
+  var map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
+
+  var georssLayer = new google.maps.KmlLayer({
+    url: 'http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
+  });
+  georssLayer.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
