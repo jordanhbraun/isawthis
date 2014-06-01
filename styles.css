@@ -9,6 +9,8 @@ a.social:visited {
 
 a.social:hover {
 	color: #999999;
-};
+}
 
-
+.twitter-timeline {
+	height: 600px;
+}
