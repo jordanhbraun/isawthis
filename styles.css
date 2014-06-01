@@ -1,6 +1,6 @@
 /*Style sheet for project */
 a.social {
-	color: #333333;
+	color: #2A5DB0;
 };
 
 a.social:visited {
@@ -12,6 +12,3 @@ a.social:hover {
 };
 
 
- #map-container { 
-	width: 100%;
- 	height: 800px; }
